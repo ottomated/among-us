@@ -1,7 +1,7 @@
 const { Command } = require('discord-akairo');
 const L = require('../logger');
 
-const blacklistedWords = new Set(['LMAO', 'ROFL', 'FUCK', 'BRUH', 'SHIT', 'WHAT', 'LULW', 'KEKW', 'LOLW', 'DUDE', 'HAHA', 'AHAH', 'LMOA']);
+const blacklistedWords = new Set(['LMAO', 'ROFL', 'FUCK', 'BRUH', 'SHIT', 'WHAT', 'LULW', 'KEKW', 'LOLW', 'DUDE', 'HAHA', 'AHAH', 'LMOA', 'JOIN']);
 
 class CodeCommand extends Command {
 	constructor() {
