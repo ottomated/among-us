@@ -14,9 +14,7 @@ class ListCommand extends Command {
 		let list = queue === '' ? [] : queue.split(',');
 		list = list.map(id => msg.guild.members.resolve(id)).filter(user => user);
 
-		console.log(list.map(m => m.voice.connection));
-		list = list.filter(member => !member.voice.connection);
-		console.log(list.map(m => m.voice.connection));
+		list = list.filter(member => !member.voice.channel);
 		await this.client.settings.set(msg.guild.id, 'queue', list.map(member => member.id).join(','));
 
 		if (list.length === 0)
