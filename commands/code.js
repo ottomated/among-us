@@ -1,7 +1,7 @@
 const { Command } = require('discord-akairo');
 const L = require('../logger');
 
-const blacklistedWords = new Set(['LMAO', 'ROFL', 'FUCK', 'BRUH', 'SHIT', 'WHAT', 'LULW', 'KEKW', 'LOLW', 'DUDE', 'HAHA', 'AHAH', 'LMOA', 'JOIN', 'COME']);
+const blacklistedWords = new Set(['NICE', 'OKAY', 'STFU', 'WHOA', 'GUYS', 'LMAO', 'ROFL', 'FUCK', 'BRUH', 'SHIT', 'WHAT', 'LULW', 'KEKW', 'LOLW', 'DUDE', 'HAHA', 'AHAH', 'LMOA', 'JOIN', 'COME']);
 
 class CodeCommand extends Command {
 	constructor() {
@@ -32,8 +32,8 @@ class CodeCommand extends Command {
 					}
 				}
 			}
-			maxChannel.edit({name: `Voice | ${msg.content}`});
-			msg.guild.me.edit({nick: `${msg.content} | ${this.client.user.username}`});
+			maxChannel.edit({ name: `Voice | ${msg.content}` });
+			msg.guild.me.edit({ nick: `${msg.content} | ${this.client.user.username}` });
 			L.log(`Updated code to ${msg.content}`);
 		}
 	}
