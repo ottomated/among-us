@@ -40,7 +40,7 @@ class QueueCommand extends Command {
 			} catch (e) {
 				L.log(`Failed to DM ${args.target.user.tag}`, e);
 			}
-			L.log(`Dequeued ${args.target.user.tag} after 12 hours`);
+			L.log(`Dequeued ${args.target.user.tag} after 3 hours`);
 		}, 1000 * 60 * 60 * 3);
 	}
 }

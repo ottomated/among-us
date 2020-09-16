@@ -6,7 +6,7 @@ const blacklistedWords = new Set(['NICE', 'OKAY', 'STFU', 'WHOA', 'GUYS', 'LMAO'
 class CodeCommand extends Command {
 	constructor() {
 		super('code', {
-			regex: /^[A-Z]{4}$/,
+			regex: /^[A-Z]{6}$/,
 			channel: 'guild',
 			clientPermissions: ['MANAGE_CHANNELS']
 		});
