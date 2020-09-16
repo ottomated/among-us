@@ -36,12 +36,12 @@ class QueueCommand extends Command {
 			list = list.filter(id => id !== args.target.id);
 			await this.client.settings.set(msg.guild.id, 'queue', list.join(','));
 			try {
-				await args.target.send(`You have been automatically dequeued from ${msg.guild.name} after 3 hours. Use \`!queue\` again in the server to re-queue yourself.`);
+				await args.target.send(`You have been automatically dequeued from ${msg.guild.name} after 6 hours. Use \`!queue\` again in the server to re-queue yourself.`);
 			} catch (e) {
 				L.log(`Failed to DM ${args.target.user.tag}`, e);
 			}
-			L.log(`Dequeued ${args.target.user.tag} after 3 hours`);
-		}, 1000 * 60 * 60 * 3);
+			L.log(`Dequeued ${args.target.user.tag} after 6 hours`);
+		}, 1000 * 60 * 60 * 6);
 	}
 }
 
