@@ -1,0 +1,12 @@
+version: "3.7"
+
+services:
+  among_us:
+    container_name: among-us
+    build:
+      context: ./
+      dockerfile: docker/Dockerfile
+    restart: unless-stopped
+    command: yarn start
+    volumes:
+        - ./.env:/usr/app/.env
