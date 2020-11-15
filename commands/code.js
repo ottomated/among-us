@@ -14,7 +14,9 @@ class CodeCommand extends Command {
 
 	async exec(msg) {
 		if (!blacklistedWords.has(msg.content)) {
-			await msg.react('👀');
+			try {
+				await msg.react('👀');
+			} catch (e) { }
 			let oldCode = await this.client.settings.get(msg.guild.id, 'code', '');
 			if (oldCode === msg.content) return;
 			await this.client.settings.set(msg.guild.id, 'code', msg.content);

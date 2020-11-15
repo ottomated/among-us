@@ -10,7 +10,8 @@
     "dotenv": "^8.2.0",
     "moment": "^2.27.0",
     "sqlite": "^4.0.14",
-    "sqlite3": "^5.0.0"
+    "sqlite3": "^5.0.0",
+    "twitch": "^4.2.7"
   },
   "scripts": {
     "start": "node bot.js"

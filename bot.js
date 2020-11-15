@@ -3,6 +3,8 @@ const { AkairoClient, CommandHandler, SQLiteProvider, ListenerHandler } = requir
 const sqlite = require('sqlite');
 const sqlite3 = require('sqlite3');
 const L = require('./logger');
+const { ApiClient } = require('twitch');
+const { StaticAuthProvider } = require('twitch-auth');
 
 class AmongUsClient extends AkairoClient {
 	constructor() {
@@ -37,6 +39,11 @@ class AmongUsClient extends AkairoClient {
 		}
 		this.settings = new SQLiteProvider(this.database, 'among_us');
 		await this.settings.init();
+
+		const auth = new StaticAuthProvider(process.env.TWITCH_CLIENT_ID, process.env.TWITCH_CLIENT_SECRET);
+
+		this.twitch = new ApiClient({ authProvider: auth });
+
 		return super.login(token);
 	}
 }

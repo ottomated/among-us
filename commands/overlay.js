@@ -18,7 +18,6 @@ class OverlayCommand extends Command {
 	}
 
 	async exec(msg, args) {
-		console.log(msg, args);
 		if (!args.channel) {
 			return msg.channel.send(`Please supply a channel to generate the overlay link for, i.e. \`!overlay ${msg.guild.channels.cache.find(c => c.type === 'voice').name}\``);
 		}

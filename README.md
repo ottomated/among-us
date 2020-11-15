@@ -4,4 +4,5 @@
 3. Run `yarn install` to install packages
 4. Create a bot account at [https://discord.com/developers/applications](https://discord.com/developers/applications)
 5. Enter the token in `.env.example` and rename the file to `.env`
+6. Create a Twitch application at [https://dev.twitch.tv/console/apps](https://dev.twitch.tv/console/apps) and paste the client id and client secret into `.env`
 6. Run the bot with `yarn start`
